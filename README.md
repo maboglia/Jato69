@@ -5,26 +5,23 @@ Repo del corso generation
 
 ### Fondamenti di programmazione
 
-* Dal problema al programma
-* La nozione di algoritmo
-* Linguaggi per la descrizione di algoritmi.
-* I diagrammi di flusso
-* Paradigmi di programmazione.
+* ~~Dal problema al programma~~
+* ~~La nozione di algoritmo~~
+* Linguaggi per la descrizione di ~~algoritmi.
+* I diagrammi di flusso~~
+* ~~Paradigmi di programmazione.~~
 
 ---
 
 ### Installazione ambiente di sviluppo
 
-* Introduzione alla programmazione orientata agli oggetti.
-* Il ciclo di vita del software e le qualità dei programmi
-* Introduzione linguaggio Java
-* Introduzione a Java e al processo di compilazione
-* Compilazione ed esecuzione
-* Primi programmi Java.
+* ~~Introduzione alla programmazione orientata agli oggetti.~~
+* ~~Il ciclo di vita del software e le qualità dei programmi~~
+* ~~Introduzione linguaggio Java~~
+* ~~Introduzione a Java e al processo di compilazione~~
+* ~~Compilazione ed esecuzione~~
+* ~~Primi programmi Java.~~
 
----
-
-### 
 ---
 
 ### Input/Output
@@ -48,11 +45,11 @@ Repo del corso generation
 * Pre/post incremento
 * Variabili locali
 * Scope delle variabili
-* Tipi di dato
-* Tipi di dato primitivi
+* ~~Tipi di dato~~
+* ~~Tipi di dato primitivi~~
 * Tipi reference: tipi di dato complessi e oggetti
 * Astrazione e decomposizione: funzioni e metodi Metodi
-* Il metodo main() ed i sottoprogrammi
+* ~~Il metodo main() ed i sottoprogrammi~~
 * Metodi di classe: La parola chiave Static
 * Passaggio dei parametri per riferimento e per valore
 * Modificatori
