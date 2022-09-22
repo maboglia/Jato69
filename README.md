@@ -7,8 +7,8 @@ Repo del corso generation
 
 * ~~Dal problema al programma~~
 * ~~La nozione di algoritmo~~
-* Linguaggi per la descrizione di ~~algoritmi.
-* I diagrammi di flusso~~
+* Linguaggi per la descrizione di algoritmi.
+* I diagrammi di flusso
 * ~~Paradigmi di programmazione.~~
 
 ---
