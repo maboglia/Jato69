@@ -12,9 +12,9 @@ public class CalcolatriceDemo {
 		//int risultato = addizione(5,9);
 		
 		System.out.println("Addizione: " + Calcolatrice.addizione(a,b));
-		System.out.println("Sottrazione " + Calcolatrice.sottrazione(a,b));
-		System.out.println("Moltiplicazione " + Calcolatrice.moltiplicazione(a,b));
-		System.out.println("Divisione " + Calcolatrice.divisione(a,b));
+		System.out.println("Sottrazione: " + Calcolatrice.sottrazione(a,b));
+		System.out.println("Moltiplicazione: " + Calcolatrice.moltiplicazione(a,b));
+		System.out.println("Divisione: " + Calcolatrice.divisione(a,b));
 		 
 		
 	}
