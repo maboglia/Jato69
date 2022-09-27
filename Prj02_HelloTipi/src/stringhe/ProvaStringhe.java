@@ -9,7 +9,7 @@ public class ProvaStringhe {
 		
 		
 		String s2 = new String("Ciao");
-		
+		s2.length();
 		s2 = "ciao mondo";
 		
 		System.out.println(s1 == s3);//confrontando la posizione 
