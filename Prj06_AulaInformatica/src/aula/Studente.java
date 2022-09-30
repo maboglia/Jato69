@@ -19,7 +19,7 @@ public class Studente {
 	}
 	
 	public String getStudente() {
-		return nome + " " + cognome.toUpperCase();
+		return matricola + ") "+  nome + " " + cognome.toUpperCase();
 	}
 	
 	public void setStudente(String ilNome, String ilCognome) {

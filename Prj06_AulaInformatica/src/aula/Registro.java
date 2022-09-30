@@ -4,59 +4,16 @@ import java.util.Scanner;
 
 public class Registro {
 
-	Studente[] elenco = null;
+	Studente[] elenco = null;//prendo l'array dalla classe Jato69
 	int presenti;
 	int assenti;
 	
 	public void init() {
-		//qui devo trovare un modo per riempire il registro
-		
-		String[] studenti = {
-				"Abel Nucci",
-				"Adrian Bucur",
-				"Alessia Marton",
-				"Andrea Nardo",
-				"Angelika Grażyna",
-				"Antonio Napolitano",
-				"Clarissa Quagliotti",
-				"Claudia Seres",
-				"Dalila DiPaolo",
-				"dario mucci",
-				"Davide Valerio",
-				"Federico Fissore",
-				"Francesco Villa",
-				"giacomo salato",
-				"Giuseppe Morabito",
-				"Leonardo Mundaca",
-				"Lorena Scattone",
-				//"Lorenzo Pace",
-				"Lorenzo Zeppegno",
-				"Luca Franchino",
-				"Luisa Acevedo",
-				"Nicolò Petrucci",
-				"nigusu cosentini",
-				"Noemi DeCicco",
-				"riccardo fogliasso",
-				"Riccardo Tucci",
-				"Valentina DeIaco",
-				"Valentina DiGesu",
-		};
-		
-		elenco = new Studente[studenti.length];
-		
-		for (int i = 0; i < studenti.length; i++) {//ciclo le stringhe none cognome
-			
-			String[] nomecognome = studenti[i].split(" ");//separo con lo spazio il nome e il cognome
-			String nome = nomecognome[0];//prendo dall'array il nome alla pos 0
-			String cognome = nomecognome[1];//prendo dall'array il cognome alla pos 1
-			
-			//Studente s = new Studente(nome, cognome);//creo l'oggetto studente
-			//s.setStudente(nome, cognome);//valorizzo le sue proprietà nome e cognome
-			elenco[i] = new Studente(nome, cognome);//creo l'oggetto studente;//aggiungo lo studente all'array elenco
-			
-			
-		}
-		
+//		if (Math.random() > 0.5)
+		elenco = StudentiJato69.studenti;
+//		else 
+//		elenco = StudentiJato70.studenti;
+
 	}
 	
 	public void appello() {
