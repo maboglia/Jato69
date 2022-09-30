@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Registro {
 
-	Studente[] elenco = new Studente[28];
+	Studente[] elenco = null;
 	int presenti;
 	int assenti;
 	
@@ -29,7 +29,7 @@ public class Registro {
 				"Giuseppe Morabito",
 				"Leonardo Mundaca",
 				"Lorena Scattone",
-				"Lorenzo Pace",
+				//"Lorenzo Pace",
 				"Lorenzo Zeppegno",
 				"Luca Franchino",
 				"Luisa Acevedo",
@@ -42,15 +42,17 @@ public class Registro {
 				"Valentina DiGesu",
 		};
 		
+		elenco = new Studente[studenti.length];
+		
 		for (int i = 0; i < studenti.length; i++) {//ciclo le stringhe none cognome
 			
 			String[] nomecognome = studenti[i].split(" ");//separo con lo spazio il nome e il cognome
 			String nome = nomecognome[0];//prendo dall'array il nome alla pos 0
 			String cognome = nomecognome[1];//prendo dall'array il cognome alla pos 1
 			
-			Studente s = new Studente();//creo l'oggetto studente
-			s.setStudente(nome, cognome);//valorizzo le sue proprietà nome e cognome
-			elenco[i] = s;//aggiungo lo studente all'array elenco
+			//Studente s = new Studente(nome, cognome);//creo l'oggetto studente
+			//s.setStudente(nome, cognome);//valorizzo le sue proprietà nome e cognome
+			elenco[i] = new Studente(nome, cognome);//creo l'oggetto studente;//aggiungo lo studente all'array elenco
 			
 			
 		}
