@@ -5,7 +5,7 @@ public class Rettangolo {
 	public double base, altezza;
 	
 	/**
-	 * Cotruttore del Rettangolo
+	 * Costruttore del Rettangolo
 	 * @param b inserisci il valore della base
 	 * @param h inserisci il valore della altezza
 	 */

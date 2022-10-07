@@ -1,28 +1,25 @@
 package demo;
 
+import forme.Punto;
 import forme.Rettangolo;
+import forme.Segmento;
 
 public class Geometria {
 
 	public static void main(String[] args) {
-		Rettangolo r1 = new Rettangolo(5, 4);
 
-		System.out.println(r1.getInfo());
+		Punto a = new Punto(3, 2);
+		Punto b = new Punto(8, 2);
+		Punto c = new Punto(3, 6);
 		
-//		System.out.println(r1.getPerimetro());
-//		System.out.println(r1.getSuperficie());
+		Segmento ab = new Segmento(a, b);
+		System.out.println(ab.lunghezza());
 		
-//		System.out.println("Posizione di r1: " + r1);
-//		System.out.println(r1.base);
-//		System.out.println(r1.altezza);
-
-		Rettangolo r2 = new Rettangolo(4,3);
-
-		System.out.println(r2.getInfo());
+		Segmento ac = new Segmento(a, c);
+		System.out.println(ac.lunghezza());
 		
-		//		System.out.println("Posizione di r2: " + r2);
-//		System.out.println(r2.getPerimetro());
-//		System.out.println(r2.getSuperficie());
+		Segmento bc = new Segmento(b, c);
+		System.out.println(bc.lunghezza());
 		
 	}
 
