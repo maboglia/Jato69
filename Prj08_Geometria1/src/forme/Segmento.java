@@ -12,9 +12,19 @@ public class Segmento {
 	
 	public double lunghezza() {
 		
-		return Math.sqrt(   Math.pow((b.x  - a.x), 2)  +   Math.pow((b.y  - a.y), 2)     );
+		return Math.sqrt(   
+				
+				Math.pow(   (b.x  - a.x)  , 2   )  +   
+				Math.pow(   (b.y  - a.y)  , 2   )     
+				
+				);
 		
 		
+	}
+
+	@Override
+	public String toString() {
+		return "Segmento [a=" + a + ", b=" + b + ", lunghezza()=" + lunghezza() + "]";
 	}
 	
 	

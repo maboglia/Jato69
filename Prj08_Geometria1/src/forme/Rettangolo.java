@@ -2,17 +2,17 @@ package forme;
 
 public class Rettangolo {
 	
-	public double base, altezza;
+	public Segmento base, altezza;
 	
 	/**
 	 * Costruttore del Rettangolo
-	 * @param b inserisci il valore della base
-	 * @param h inserisci il valore della altezza
+	 * @param base inserisci il valore della base
+	 * @param altezza inserisci il valore della altezza
 	 */
-	public Rettangolo(double b, double h) {
+	public Rettangolo(Segmento base, Segmento altezza) {
 		
-		base = b;
-		altezza = h;
+		this.base = base;
+		this.altezza = altezza;
 //		System.out.println("Ho costruito un rettangolo generico");
 //		System.out.println("base = " + base);
 //		System.out.println("altezza = " + altezza);
@@ -20,7 +20,7 @@ public class Rettangolo {
 
 	public double getPerimetro() {
 //		double p = 2 * (base + altezza);
-		return 2 * (base + altezza);
+		return 2 * (base.lunghezza() + altezza.lunghezza());
 	}
 	
 	/**
@@ -28,16 +28,15 @@ public class Rettangolo {
 	 * @return Ritorna il valore della superficie
 	 */
 	public double getSuperficie() {
-		return base * altezza;
+		return base.lunghezza() * altezza.lunghezza();
+	}
+
+	@Override
+	public String toString() {
+		return "Rettangolo [base=" + base + ", altezza=" + altezza + ", getPerimetro()=" + getPerimetro()
+				+ ", getSuperficie()=" + getSuperficie() + "]";
 	}
 	
-	public String getInfo() {
-		return "Rettangolo" +
-				"\n base " + base +
-				"\n altezza " + altezza +
-				"\n perimetro " + getPerimetro() +
-				"\n area " + getSuperficie();
-				 
-	}
+	
 	
 }
