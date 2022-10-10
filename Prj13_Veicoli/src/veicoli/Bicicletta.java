@@ -6,30 +6,67 @@ public class Bicicletta {
 	private String colore;
 	private String nome;
 	private int marcia;
+	private double prezzoNoleggioOrario;
 	
 	//metodi
 	//metodo costruttore
 	public Bicicletta() {
 		this.colore = "bianco";
-		this.nome = "bianchi";
+		this.nome = "standard";
 		this.marcia = 1;
+		this.prezzoNoleggioOrario = 10;
 	}
 
+	
+	public Bicicletta(String nome, double prezzoNoleggioOrario) {
+		this.colore = "bianco";
+		this.marcia = 1;
+		this.nome = nome;
+		this.prezzoNoleggioOrario = prezzoNoleggioOrario;
+	}
+	
 	//metodi custom
-	public void cambiaColore(String colore) {
+
+
+
+
+	public String getColore() {
+		return colore;
+	}
+
+	public void setColore(String colore) {
 		this.colore = colore;
 	}
 
-	public void cambiaMarcia(int marcia) {
-		if (marcia > 0 && marcia <=6)
-			this.marcia = marcia;
-		else 
-			System.out.println("non puoi mettere la " + marcia);
+	public String getNome() {
+		return nome;
 	}
-	
-	public void cambiaNome(String nome) {
+
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public int getMarcia() {
+		return marcia;
+	}
+
+	public void setMarcia(int marcia) {
+		if (marcia > 0 && marcia <= 6) {
+			this.marcia = marcia;
+			//altre istruzioni
+		}
+	}
+
+	public double getPrezzoNoleggioOrario() {
+		return prezzoNoleggioOrario;
+	}
+
+	public void setPrezzoNoleggioOrario(double prezzoNoleggioOrario) {
+		this.prezzoNoleggioOrario = prezzoNoleggioOrario;
+	}
+	
+	
+	
 	
 	//metodo tostring
 	@Override
@@ -38,6 +75,7 @@ public class Bicicletta {
 				+ " è di colore " + this.colore 
 				+ ", adesso è in " + this.marcia + " marcia]";
 	}
+
 	
 	
 }
