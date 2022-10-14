@@ -8,46 +8,33 @@ import prodotti.Prodotto;
 public class Bazar {
 
 	public static void main(String[] args) {
-		//elencoProdotti();
-		Articolo[] articoli= {
-			new Articolo(Prodotti.getProdotti()[0], 2),	
-			new Articolo(Prodotti.getProdotti()[2], 5),	
-			new Articolo(Prodotti.getProdotti()[4], 3),	
-		};
 		
-		stampaScontrinoHTML(articoli);
+		Prodotti.riempiProdotti();//magazzino pieno
+		Scontrino sc1 = new Scontrino();
 		
+		//menu scelta
+		mostraProdotti();
 		
-	}
-
-	private static void stampaScontrinoHTML(Articolo[] articoli) {
-
-		StringBuilder sb = new StringBuilder("<html>\n");
+		//cassiere aggiunge articolo a scontrino
+		sc1.addArticolo(new Articolo(Prodotti.findProdottoById(1), 2));
+		sc1.addArticolo(new Articolo(Prodotti.findProdottoById(2), 3));
+		sc1.addArticolo(new Articolo(Prodotti.findProdottoById(3), 4));
+		sc1.addArticolo(new Articolo(Prodotti.findProdottoById(4), 5));
+		sc1.addArticolo(new Articolo(Prodotti.findProdottoById(5), 25));
 		
-		sb.append("<head>\n");
-		sb.append("</head>\n");
-		sb.append("<body>\n");
-			
-		sb.append("<ul>\n");
-
-		for (Articolo articolo : articoli) {
-			sb.append("<li>" + articolo.getProdotto().getNome() +"</li>\n");
-		}
+		//stampo scontrino
+		System.out.println(sc1);
 		
-		sb.append("</ul>\n");
-		
-		sb.append("<script> console.log('funziona'); </script>");
-		
-		sb.append("</body>\n");
-		
-		System.out.println(sb.toString());
 		
 	}
 
-	private static void elencoProdotti() {
+	private static void mostraProdotti() {
+		System.out.println("Elenco prodotti");
+		
 		for (Prodotto p : Prodotti.getProdotti()) {
 			System.out.println(p);
 		}
 	}
+	
 
 }

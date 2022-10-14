@@ -8,6 +8,28 @@ public class Prodotti {
 
 	private static ArrayList<Prodotto> prodotti = new ArrayList<Prodotto>();
 	
+	public static void riempiProdotti() {
+	
+		String[] prodottiFake = {
+				"maglia rossa", "maglia blu", "maglia verde", "giacca gialla", "pantalone nero"
+		};
+		
+		for (int i = 0; i < prodottiFake.length; i++) {
+			String nomeProdotto = prodottiFake[i];
+			int codProdotto = i + 1;
+			double prezzoProdotto = (Math.random() * 25);
+			
+			Prodotto p = new Prodotto(codProdotto, nomeProdotto, prezzoProdotto);
+			addProdotto(p);
+		}
+	}
+	
+	public static void svuotaProdotti() {
+		prodotti.clear();
+	}
+	
+	
+	
 	public static void addProdotto(Prodotto p) {
 		prodotti.add(p);
 	}
