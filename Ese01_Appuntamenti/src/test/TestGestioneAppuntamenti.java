@@ -42,7 +42,7 @@ public class TestGestioneAppuntamenti {
 		
 		listaCompleta(gestione);
 		
-		appuntamentiPerPaziente(p1, gestione);
+		 
 		
 		appuntamentiPerStanza(s2, gestione);
 		
