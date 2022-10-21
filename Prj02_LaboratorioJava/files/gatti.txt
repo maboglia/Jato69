@@ -1,0 +1,26 @@
+1 mese,6 mesi
+2 - 3 mesi,2-5 anni
+4 mesi,6 - 8 anni
+6 mesi,10 anni
+7 mesi,12 anni
+12 mesi,15 - 16 anni
+18 mesi,20 - 21 anni
+2 anni,24 anni
+3 anni,28 anni
+4 anni,32 anni
+5 anni,36 anni
+6 anni,40 anni
+7 anni,44 anni
+8 anni,48 anni
+9 anni,52 anni
+10 anni,56 anni
+11 anni,61 anni
+12 anni,64 anni
+13 anni,68 anni
+14 anni,72 anni
+15 anni,76 anni
+16 anni,80 anni
+17 anni,84 anni
+18 anni,88 anni
+19 anni,92 anni
+20 anni,96 anni
