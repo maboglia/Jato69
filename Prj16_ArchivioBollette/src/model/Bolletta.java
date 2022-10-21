@@ -24,7 +24,7 @@ public class Bolletta {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Bolletta [importo=");
+		builder.append("Bolletta Generica [importo=");
 		builder.append(importo);
 		builder.append("]");
 		return builder.toString();
