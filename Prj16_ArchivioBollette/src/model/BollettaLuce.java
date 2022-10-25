@@ -25,7 +25,7 @@ public class BollettaLuce extends Bolletta {
 		builder.append(", importo=");
 		builder.append(this.importo);
 		builder.append("\n");
-		builder.append(super.toString());
+//		builder.append(super.toString());
 		return builder.toString();
 	}
 	
