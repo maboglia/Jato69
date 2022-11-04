@@ -11,6 +11,24 @@
 <h1>Inserisci</h1>
 <%@ include file="menu.jsp" %>
 
+<form action="doInserisci.jsp" method="post">
+
+	<label for="titoloLibro">Titolo</label>
+	<input type="text" name="titoloLibro" id="titoloLibro">
+
+	<input type="submit" value="Aggiungi Libro">
+</form>
+
+<div>
+
+	<%
+		if(request.getParameter("insert")!=null){
+			out.print(request.getParameter("insert"));
+		}
+	
+	%>
+
+</div>
 
 </body>
 </html>
