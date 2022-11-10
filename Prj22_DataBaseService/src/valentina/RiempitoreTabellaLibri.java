@@ -17,7 +17,7 @@ public class RiempitoreTabellaLibri {
 		Connessione c = new Connessione();
 		Connection conn = c.getConn();
 		
-		svuotaBiblioteca(conn);
+		//svuotaBiblioteca(conn);
 		
 		File f = new File("files/Biblioteca.csv");
 		
@@ -30,10 +30,10 @@ public class RiempitoreTabellaLibri {
 			//leggo il file: lancia eccezione FileNotFoundException
 			Scanner scanner = new Scanner(f);
 
+			//scrivo sul database: lancia eccezione SQLException
+			PreparedStatement ps = conn.prepareStatement(queryRiempimento);
 			
 			while(scanner.hasNextLine()) {
-				//scrivo sul database: lancia eccezione SQLException
-				PreparedStatement ps = conn.prepareStatement(queryRiempimento);
 				
 				String riga = scanner.nextLine();
 				
