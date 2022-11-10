@@ -17,7 +17,11 @@ public class LoginCtrl extends HttpServlet {
 //		risposta.setContentType("text/html");//MIME type
 //		risposta.getWriter().append("<h1>ciao, sono il metodo get ;)</h1>"); 
 		
-		risposta.sendRedirect("formLogin.jsp");
+		//risposta.sendRedirect("formLogin.jsp");
+		
+		richiesta.getRequestDispatcher("header.jsp").include(richiesta, risposta);
+			richiesta.getRequestDispatcher("formLogin.jsp").include(richiesta, risposta);
+		richiesta.getRequestDispatcher("footer.jsp").include(richiesta, risposta);		
 	}
 
 	@Override
@@ -28,8 +32,10 @@ public class LoginCtrl extends HttpServlet {
 		
 		if (username.equals("mauro") && password.equals("12345")) {
 			
-			richiesta.getRequestDispatcher("areaRiservata.jsp").forward(richiesta, risposta);
 			
+			richiesta.getRequestDispatcher("header.jsp").include(richiesta, risposta);
+				richiesta.getRequestDispatcher("areaRiservata.jsp").include(richiesta, risposta);			
+			richiesta.getRequestDispatcher("footer.jsp").include(richiesta, risposta);
 			//risposta.sendRedirect("areaRiservata.jsp");
 		}
 		else {
