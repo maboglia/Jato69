@@ -43,10 +43,7 @@ public class ProvaGestionale {
 				((Impiegato)d).setOreLavoro(100);
 			}
 
-			if (d instanceof Dirigente) {
-				((Dirigente)d).setEmolumenti(500);
-			}
-			
+			 
 		}
 		
 		
