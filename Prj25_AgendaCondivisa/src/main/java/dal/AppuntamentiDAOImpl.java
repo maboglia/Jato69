@@ -2,8 +2,11 @@ package dal;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
+import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import model.Appuntamento;
@@ -46,20 +49,62 @@ public class AppuntamentiDAOImpl implements AppuntamentiDAO {
 
 	@Override
 	public void deleteAppuntamentoById(int id) {
-		// TODO Auto-generated method stub
+		
+		try {
+			ps = conn.prepareStatement(ELIMINA_UNO);
+			ps.setInt(1, id);
+			ps.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
 	@Override
 	public Appuntamento getAppuntamentoById(int id) {
-		// TODO Auto-generated method stub
+		try {
+			ps = conn.prepareStatement(TROVA_UNO);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				String descrizione = rs.getString("descrizione");
+				LocalTime ora =  rs.getTime("ora").toLocalTime();
+				Appuntamento temp = new Appuntamento(descrizione, ora);
+				return temp;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return null;
 	}
 
 	@Override
 	public List<Appuntamento> getAppuntamenti() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Appuntamento> appuntamenti = new ArrayList<>();
+		
+		try {
+			ps = conn.prepareStatement(TROVA_TUTTI);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				String descrizione = rs.getString("descrizione");
+				LocalTime ora =  rs.getTime("ora").toLocalTime();
+				Appuntamento temp = new Appuntamento(descrizione, ora);
+				appuntamenti.add(temp);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return appuntamenti;
 	}
 
 }
