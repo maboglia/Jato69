@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import model.Agenda;
 
 import java.io.IOException;
@@ -41,12 +42,20 @@ public class AgendaCtrl extends HttpServlet {
 //		agenda.addAppuntamento("javascrpt");
 //		agenda.addAppuntamento("sql");
 
-		request.setAttribute("elencoAppuntamenti", agenda.getAppuntamenti());
-		
+		HttpSession session = request.getSession();
 		request.getRequestDispatcher("header.jsp").include(request, response);
 		request.getRequestDispatcher("menu.jsp").include(request, response);
-		request.getRequestDispatcher("formAddAppuntamento.jsp").include(request, response);
-		request.getRequestDispatcher("agenda.jsp").include(request, response);
+		
+		if (session.getAttribute("loggato")!=null && session.getAttribute("loggato").equals("okkkei") ) {
+			System.out.println("sei loggato");
+			request.setAttribute("elencoAppuntamenti", agenda.getAppuntamenti());
+			
+			request.getRequestDispatcher("formAddAppuntamento.jsp").include(request, response);
+			request.getRequestDispatcher("agenda.jsp").include(request, response);
+		} else {
+			response.getWriter().append("<h1> NON puoi entrare! Rifai il login </h1>");
+		}
+		
 		request.getRequestDispatcher("footer.jsp").include(request, response);
 	}
 

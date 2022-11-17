@@ -37,6 +37,7 @@ public class LoginCtrl extends HttpServlet 	 {
 			richiesta.getRequestDispatcher("areaRiservata.jsp").include(richiesta, risposta);
 			aCtrl.doGet(richiesta, risposta);
 			richiesta.getRequestDispatcher("footer.jsp").include(richiesta, risposta);
+			richiesta.getSession().setAttribute("loggato", "okkkei");
 			//risposta.sendRedirect("areaRiservata.jsp");
 		}else {
 			 doGet(richiesta, risposta);

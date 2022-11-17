@@ -4,6 +4,12 @@
 <%@page import="java.util.ArrayList"%>
 
 <% 
+	if (session.getAttribute("loggato")!=null && session.getAttribute("loggato").equals("okkkei")  ){
+		out.println("sei loggato");
+	} else {
+		out.println("NON sei loggato");
+	}
+
 	ArrayList<Appuntamento> appuntamenti = 
 	 (ArrayList<Appuntamento>) request.getAttribute("elencoAppuntamenti");
 	
