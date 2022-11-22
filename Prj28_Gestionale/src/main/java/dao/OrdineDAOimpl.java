@@ -63,7 +63,7 @@ public class OrdineDAOimpl implements OrdineDAO {
 				int cliente_id= rs.getInt("cliente_id");
 				int impiegato_id= rs.getInt("impiegato_id");
 				java.util.Date data= rs.getDate("data");
-				String statoConsegna= rs.getString("statoConsegna");
+				String statoConsegna= rs.getString("consegna");
 				Ordine dummy= new Ordine(cliente_id, impiegato_id, data, statoConsegna);
 				return dummy;
 			}
@@ -85,16 +85,16 @@ public class OrdineDAOimpl implements OrdineDAO {
 				int cliente_id= rs.getInt("cliente_id");
 				int impiegato_id= rs.getInt("impiegato_id");
 				java.util.Date data= rs.getDate("data");
-				String statoConsegna= rs.getString("statoConsegna");
+				String statoConsegna= rs.getString("consegna");
 				Ordine dummy= new Ordine(id,cliente_id, impiegato_id, data, statoConsegna);
+				//System.out.println(dummy);
 				ordini.add(dummy);
 			}
-			return ordini;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return ordini;
 	}
 
 }

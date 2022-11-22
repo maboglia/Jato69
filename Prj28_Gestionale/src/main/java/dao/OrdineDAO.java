@@ -25,13 +25,13 @@ public interface OrdineDAO {
 	 * parametri necessari:
 	 * cliente_id, impiegato_id, data, statoConsegna.
 	 */
-	String ADD_ORDINE="insert into ordine (cliente_id, impiegato_id, data, statoConsegna) values(?,?,?,?)";
+	String ADD_ORDINE="insert into ordine (cliente_id, impiegato_id, data, consegna) values(?,?,?,?)";
 	/**
 	 * Serve a modificare un ordine tramite 
 	 * parametri necessari:
 	 * cliente_id, impiegato_id, data, statoConsegna + utente.id da modificare.
 	 */
-	String UPDATE_ORDINE="update ordine set cliente_id= ?, impiegato_id =? , data=? , statoConsegna=? where id= ?";
+	String UPDATE_ORDINE="update ordine set cliente_id= ?, impiegato_id =? , data=? , consegna=? where id= ?";
 
 	//crud su tabella appuntamenti
 			/**
