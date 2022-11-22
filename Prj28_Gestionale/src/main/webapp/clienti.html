@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Clienti</h1>
+
+<table id="miaTabella">
+  <tr>
+    <th>Nome</th>
+    <th>Cognome</th>
+    <th>Credito</th>
+  </tr>
+
+</table>
+
+<script type="text/javascript">
+
+const TABELLA = document.getElementById('miaTabella');
+const URL = "http://localhost:8080/Prj28_Gestionale/cliente";
+
+fetch(URL)
+	.then(collezioneJSON => collezioneJSON.json())
+	.then(collJS => {
+	
+		for (const cliente of collJS){
+			console.log(cliente.nome)
+			
+			const TR = document.createElement('tr');
+			
+			const TD = document.createElement('td');
+			TD.textContent = cliente.nome
+			TR.appendChild(TD)
+			
+			const TD1 = document.createElement('td');
+			TD1.textContent = cliente.cognome
+			TR.appendChild(TD1)
+			
+			const TD2 = document.createElement('td');
+			TD2.textContent = cliente.credito
+			TR.appendChild(TD2)
+			
+			TABELLA.appendChild(TR)
+			
+		}
+		
+		
+		
+	})
+	
+	
+
+</script>
+
+
+</body>
+</html>
