@@ -1,6 +1,6 @@
 package interfacce;
 
-public class Licantropo implements Mostruoso {
+public class Licantropo extends CreaturaSpaventosa implements Mostruoso {
 
 	@Override
 	public void faiPaura() {

@@ -1,6 +1,6 @@
 package interfacce;
 
-public class Mummia implements Mostruoso {
+public class Mummia extends CreaturaSpaventosa implements Mostruoso {
 
 	@Override
 	public void faiPaura() {
