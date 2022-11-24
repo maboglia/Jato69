@@ -21,8 +21,7 @@
 
 *metadata/*
 
-.classpath
-.project
+
 .gitignore
 org.eclipse*
 
