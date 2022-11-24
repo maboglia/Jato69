@@ -26,11 +26,13 @@ public class ClienteREST extends HttpServlet {
 	}
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("text/html");
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("main/header.jsp").include(request, response);
+		request.getRequestDispatcher("main/menu.jsp").include(request, response);
 		
-		resp.getWriter().append("<h1>Clienti</h1>");
-		//req.getRequestDispatcher("cliente.jsp").forward(req, resp);
+		response.getWriter().append("<h1>Clienti</h1>");
+		
+		request.getRequestDispatcher("main/footer.jsp").include(request, response);
 	}
 
 	@Override

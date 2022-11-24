@@ -34,9 +34,12 @@ public class ImpiegatoCtrl extends HttpServlet {
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 				
-		response.setContentType("text/html");
+		request.getRequestDispatcher("main/header.jsp").include(request, response);
+		request.getRequestDispatcher("main/menu.jsp").include(request, response);
 		
 		response.getWriter().append("<h1>Impiegati</h1>");
+		
+		request.getRequestDispatcher("main/footer.jsp").include(request, response);
 
 	}
     
