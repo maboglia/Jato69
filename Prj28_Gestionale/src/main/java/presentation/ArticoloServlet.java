@@ -40,6 +40,8 @@ public class ArticoloServlet extends HttpServlet {
 		request.getRequestDispatcher("main/menu.jsp").include(request, response);
 		
 		response.getWriter().append("<h1>Articoli</h1>");
+
+		request.getRequestDispatcher("articoli/form_add.jsp").include(request, response);
 		
 		request.setAttribute("elenco", this.ctrl.getArticoli());
 		
@@ -55,6 +57,18 @@ public class ArticoloServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+		String descrizione = request.getParameter("descrizione");
+		String categoria = request.getParameter("categoria");
+		double prezzo = Double.parseDouble(request.getParameter("prezzo"));
+		int rimanenza = Integer.parseInt(request.getParameter("rimanenza"));
+		
+		Articolo a = new Articolo();
+		a.setDescrizione(descrizione);
+		a.setCategoria(categoria);
+		a.setPrezzo(prezzo);
+		a.setRimanenza(rimanenza);
+		
+		this.ctrl.addArticolo(a);
 		
 		
 		doGet(request, response);

@@ -14,7 +14,8 @@
   
   <tr>
     <td><%= a.getDescrizione() %></td>
-    <td><%= a.getPrezzo() %></td>
+	<td><%= a.getPrezzo() %></td>    
+
   </tr>
   
 <% } %>  

@@ -8,6 +8,10 @@ public class Articolo {
 	private String categoria;
 	private int rimanenza;
 	
+	public Articolo() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Articolo(int id, String descrizione, double prezzo, String categoria, int rimanenza) {
 		super();
 		this.id = id;
