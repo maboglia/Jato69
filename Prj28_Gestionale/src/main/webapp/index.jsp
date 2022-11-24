@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+
+<%@ include file="main/header.jsp" %>
+
+<%@ include file="main/menu.jsp" %>
+
+
 <h1>Gestionale Ordini</h1>
 
 <h2>Pagine MVC</h2>
@@ -26,6 +25,4 @@
 </ul>
 
 
-
-</body>
-</html>
+<%@ include file="main/footer.jsp" %>
