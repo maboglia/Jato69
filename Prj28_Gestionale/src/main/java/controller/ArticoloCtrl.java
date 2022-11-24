@@ -24,7 +24,7 @@ public class ArticoloCtrl {
 	}
  
 	public void updateArticolo(Articolo a) {
-		dao.addArticolo(a);
+		dao.updateArticolo(a);
 	}
  
 	public void deleteArticoloById(int id) {

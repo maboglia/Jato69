@@ -8,6 +8,7 @@
   <tr>
     <th>Descrizione</th>
     <th>Prezzo</th>
+    <th>Dettaglio</th>
   </tr>
 
 <% for (Articolo a : elenco){ %>  
@@ -15,6 +16,7 @@
   <tr>
     <td><%= a.getDescrizione() %></td>
 	<td><%= a.getPrezzo() %></td>    
+	<td><a href="articoli?id=<%= a.getId() %>">Scheda</a></td>
 
   </tr>
   

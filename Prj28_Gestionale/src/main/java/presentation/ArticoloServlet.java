@@ -41,11 +41,27 @@ public class ArticoloServlet extends HttpServlet {
 		
 		response.getWriter().append("<h1>Articoli</h1>");
 
-		request.getRequestDispatcher("articoli/form_add.jsp").include(request, response);
 		
-		request.setAttribute("elenco", this.ctrl.getArticoli());
+		if(request.getParameter("id") != null) {
+
+			
+			
+			int id = Integer.parseInt(request.getParameter("id"));
+			request.setAttribute("dettaglio", this.ctrl.getArticoloById(id));
+
+			request.getRequestDispatcher("articoli/form_update.jsp").include(request, response);
+			request.getRequestDispatcher("articoli/detail.jsp").include(request, response);
+			
+			
+		} else {
+			
+			
+			request.getRequestDispatcher("articoli/form_add.jsp").include(request, response);
+			
+			request.setAttribute("elenco", this.ctrl.getArticoli());
+			request.getRequestDispatcher("articoli/list.jsp").include(request, response);
+		}
 		
-		request.getRequestDispatcher("articoli/list.jsp").include(request, response);
 		
 		request.getRequestDispatcher("main/footer.jsp").include(request, response);
 			
@@ -68,7 +84,13 @@ public class ArticoloServlet extends HttpServlet {
 		a.setPrezzo(prezzo);
 		a.setRimanenza(rimanenza);
 		
-		this.ctrl.addArticolo(a);
+		if(request.getParameter("id") != null) {
+			a.setId(Integer.parseInt(request.getParameter("id")));
+			this.ctrl.updateArticolo(a);
+		} else {
+			
+			this.ctrl.addArticolo(a);
+		}
 		
 		
 		doGet(request, response);
