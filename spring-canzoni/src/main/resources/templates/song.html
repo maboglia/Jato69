@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>.gigante {font-size:3em}</style>
+</head>
+<body>
+	<h1>Canzoni</h1>
+	
+	<div class="gigante" th:each="canzone : ${canzoni}" th:text="${canzone.titolo}">pippo</div>
+	
+</body>
+</html>

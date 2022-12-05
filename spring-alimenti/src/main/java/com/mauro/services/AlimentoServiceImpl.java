@@ -41,7 +41,7 @@ public class AlimentoServiceImpl implements AlimentoService{
 
 	@Override
 	public List<Alimento> getAlimentiByCat(String categoria) {
-		return null;
+		return repo.findByCategoria(categoria);
 	}
 
 }
