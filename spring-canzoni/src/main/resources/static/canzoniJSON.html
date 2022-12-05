@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Canzoni</h1>
+
+<table id="tabella">
+  <tr>
+    <th>Titolo</th>
+    <th>Autore</th>
+  </tr>
+
+</table>
+
+
+<script type="text/javascript">
+
+	const TAB = document.getElementById('tabella');
+	const URL = '/api/test';
+	
+	fetch(URL)
+		.then(collezione => collezione.json())
+		.then(collJS => {
+			for (const canzone of collJS){
+				console.log(canzone.titolo, canzone.autore)
+				
+				const TD1 = document.createElement('td')//creo una cella
+				TD1.textContent = canzone.titolo;//aggiungo il testo
+				
+				const TD2 = document.createElement('td')
+				TD2.textContent = canzone.autore;	
+				
+				const TR = document.createElement('tr')//creo riga
+				
+				TR.appendChild(TD1);//Aggiungo le celle col testo
+				TR.appendChild(TD2);
+				TAB.appendChild(TR);//aggiungo la riga alla table
+				
+			}
+		})
+
+
+
+
+
+</script>
+
+</body>
+</html>

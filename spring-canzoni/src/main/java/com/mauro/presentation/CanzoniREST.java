@@ -1,22 +1,30 @@
 package com.mauro.presentation;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mauro.entities.Canzone;
+import com.mauro.repos.CanzoneRepo;
 
 @RestController
 @RequestMapping("api")
 public class CanzoniREST {
 	
-	@GetMapping("test")
-	public Canzone hello() {
-		
-		Canzone c = 
-				new Canzone(1,"Una volta ancora","Fred De Palma feat. Ana Mena","pop",2019);
-		
-		return c;
+	@Autowired
+	CanzoneRepo repo;
+	
+	@GetMapping(path = "test")
+	@CrossOrigin
+	public List<Canzone> hello() {
+
+		return repo.findAll();
 	}
+	
 }

@@ -8,7 +8,18 @@
 <body>
 	<h1>Canzoni</h1>
 	
-	<div class="gigante" th:each="canzone : ${canzoni}" th:text="${canzone.titolo}">pippo</div>
+<table>
+  <tr>
+    <th>Titolo</th>
+    <th>Autore</th>
+  </tr>
+  <tr th:each="canzone : ${canzoni}" >
+    <td th:text="${canzone.titolo}">Row 1: Col 1</td>
+    <td th:text="${canzone.autore}">Row 1: Col 2</td>
+  </tr>
+</table>
+
+	
 	
 </body>
 </html>
