@@ -34,10 +34,12 @@ public class Geometria {
 		Rettangolo r2 = new Rettangolo(ab, bc);
 		System.out.println(r2);
 		
-		Quadrato q1 = new Quadrato(ab);
-		System.out.println(q1);
+		Rettangolo q1 = new Quadrato(ab);
+		((Quadrato)q1).stampaQuadrato();
 		
 
 	}
+	
+	
 
 }

@@ -2,6 +2,8 @@ package collezioni;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,7 +26,7 @@ public class ProvaListe {
 		List<String> listaColori = new LinkedList<>(Arrays.asList(colori));
 		List<String> listaColori2 = new ArrayList<>();
 		
-		listaColori2.addAll(listaColori);
+		listaColori2.addAll(   listaColori      );
 		
 		
 //		for (String colore : colori) {

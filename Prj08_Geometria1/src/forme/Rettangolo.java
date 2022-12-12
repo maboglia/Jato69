@@ -28,6 +28,7 @@ public class Rettangolo {
 	 * @return Ritorna il valore della superficie
 	 */
 	public double getSuperficie() {
+		System.out.println("metodo del rettangolo");
 		return base.lunghezza() * altezza.lunghezza();
 	}
 

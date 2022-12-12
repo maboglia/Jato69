@@ -16,5 +16,16 @@ public class Quadrato extends Rettangolo {
 	}
 
 	
+	public void stampaQuadrato() {
+		System.out.println("sono il metodo stampa quadrato");
+	}
+	
+	@Override
+	public double getSuperficie() {
+		System.out.println("metodo del quadrato");
+		return this.lato.lunghezza() * this.lato.lunghezza();
+	}
+
+	
 	
 }
