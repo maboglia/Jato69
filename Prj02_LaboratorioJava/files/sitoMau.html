@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Mauro Bogliaccino</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+    <style>
+ .card{
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+    
+
+  }
+    
+
+
+.card:hover{
+
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+
+<!-- menu -->
+
+<!--  navbar navbar-dark bg-primary -->
+    <nav class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Mauro Bogliaccino</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link  active" href="http://www.mauro.bogliaccino.it/public/java">Java</a></li>
+        <li class="nav-item"><a class="nav-link  " href="http://www.mauro.bogliaccino.it/public/php">Php</a></li>
+        <li class="nav-item"><a class="nav-link  " href="http://www.mauro.bogliaccino.it/public/javascript">JavaScript</a></li> 
+        <li class="nav-item"><a class="nav-link  " href="http://www.mauro.bogliaccino.it/public/rest">Rest</a></li>
+        <li class="nav-item"><a class="nav-link  " href="http://www.mauro.bogliaccino.it/public/fondamenti">Fondamenti</a></li>
+        <li class="nav-item"><a target="_blank" class="nav-link " href="https://maboglia.github.io">GitHub.io</a></li>
+      </ul>
+
+</nav>
+<!-- menu -->
+
+
+						<!-- <a class="dropdown-item" href="../java/index">Java</a>
+						<a class="dropdown-item" href="../java/oca">Java OCA</a>
+						<a class="dropdown-item" href="../java/ocp">Java OCP</a>
+						<a class="dropdown-item" href="../java/programma">Programma Java Base</a>
+						<a class="dropdown-item" href="../java/spring">Programma Spring</a>
+						<a class="dropdown-item" href="../java/oracle">Programma Oracle</a> -->
+						<!-- <a class="dropdown-item" href="../php/index">Introduzione</a>
+						<a class="dropdown-item" href="../php/reference">Reference</a> -->
+
+
+	<div class="container">
+
+<article>
+
+    <h2 id="conoscenza-del-framework-spring">ConoscenzaÂ  del framework Spring</h2>
+    <h3 id="panoramica-sulle-componenti-di-base-e-sui-moduli-aggiuntivi">Panoramica sulle componenti di base e sui moduli aggiuntivi</h3>
+    <ul>
+        <li>Dependency Injection e IoC (Inversion Of Control)</li>
+        <li>The IoC Container: Core ed application Context</li>
+        <li>Bean e Bean Definition</li>
+        <li>Descrizione dei vari tipi di Contesti</li>
+        <li>Autowiring</li>
+        <li>Definizione dello Scope dei bean</li>
+        <li>Creazione ed uso dei Bean Spring: esempi concreti</li>
+        <li>Gestione centralizzata degli Errori e delle eccezioni</li>
+    </ul>
+    <h3 id="i-vantaggi-derivanti-dallutilizzo-di-spring-nella-gestione-delle-eccezioni-e-nellaccesso-ai-dati">I vantaggi derivanti dall'utilizzo di Spring nella gestione delle eccezioni e nell'accesso ai dati</h3>
+    <ul>
+        <li>
+            <p>Supporto DAO</p>
+            <ul>
+                <li>Consistenza nella gestione delle eccezioni</li>
+                <li>Data Access Exception</li>
+                <li>Iniezione delle dipendenze nei DAO</li>
+            </ul>
+        </li>
+        <li>
+            <p>Integrazione con JDBC</p>
+            <ul>
+                <li>JDBC Template</li>
+                <li>Configurazione di un DAO JDBC</li>
+                <li>SimpleJdbcInsert</li>
+                <li>SqlQuery e MappingSqlQuery</li>
+            </ul>
+        </li>
+    </ul>
+
+</article>
+
+<div id="content">
+
+</div>
+
+
+
+<script src="./js/pagine_github.js"></script>
+
+<script>
+    
+    const CONTENT = document.getElementById('content');
+    const GITH = 'https://github.com/maboglia/CorsoJava/blob/master/appunti/';
+    const SLIDER = 'http://www.bogliaccino.it/teaching/slideshow.php?parameter=';
+    const GITH_SUBPATH = 'CorsoJava/master/appunti/';
+
+
+    function creaSchede(titolo, collezione){
+
+    const ROW = document.createElement('div');
+    ROW.setAttribute('class', 'row');
+    TITLE = document.createElement('h1');
+    TITLE.setAttribute('class', 'text-secondary mt-4');
+    TITLE.textContent = titolo;
+    ROW.appendChild(TITLE);
+
+    for (const item of collezione) {
+
+        const scheda = document.createElement('div');
+        scheda.setAttribute('class', 'col-lg-3 col-md-4 col-sm-6');
+
+        const card = document.createElement('div');
+        card.setAttribute('class', 'card');
+
+        const cardBody = document.createElement('div');
+        cardBody.setAttribute('class', 'card-body');
+
+        const cardTitle = document.createElement('h5');
+        cardTitle.setAttribute('class', 'card-title text-primary');
+        cardTitle.textContent = item.title;
+
+        const cardText = document.createElement('p');
+        cardText.setAttribute('class', 'card-text');
+        cardText.innerHTML = item.description + '[<a href="'+ item.filePath + item.fileName+'">...</a>]';
+
+        const BTN = document.createElement('a');
+        BTN.setAttribute('class', 'btn btn-outline-primary me-2');
+        BTN.setAttribute('target', '_blank');
+        BTN.setAttribute('href', item.filePath + item.fileName);
+        BTN.textContent = "Github";
+        
+        
+        
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cardText);
+        cardBody.appendChild(BTN);
+
+        if (titolo != 'Altri materiali'){
+            const BTN_SLIDE = document.createElement('a');
+            BTN_SLIDE.setAttribute('class', 'btn btn-outline-danger');
+            BTN_SLIDE.setAttribute('target', '_blank');
+            BTN_SLIDE.setAttribute('href', SLIDER + GITH_SUBPATH + item.fileName);
+            BTN_SLIDE.textContent = "Slide";
+            cardBody.appendChild(BTN_SLIDE);
+        }
+
+        card.appendChild(cardBody);
+        scheda.appendChild(card);
+        ROW.appendChild(scheda);
+
+
+
+
+        console.log(item);
+    }
+
+    CONTENT.appendChild(ROW);
+
+    }
+
+
+    creaSchede('Programma del corso', programma);
+    creaSchede('Elementi fondamentali di Java', fondamenti);
+    creaSchede('Classi e oggetti', articoli);
+    creaSchede('Le principali Java API', API_Java);
+    creaSchede('Java Collections', JCF);
+    creaSchede('Advanced class design', advanced);
+    creaSchede('Altri materiali', SITOMB);
+
+
+</script>
+<footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+
+
+      <li class="nav-item"><a  class="nav-link px-2 text-muted" title="Pagina linkedin" href="https://it.linkedin.com/pub/mauro-bogliaccino/8/497/167"><img src='img/linkedin.png' alt='linkedin'></a></li>
+      <li class="nav-item"><a  class="nav-link px-2 text-muted" title="Repository github" href="http://github.com/maboglia"><img src='img/github.png' alt='github'></a></li>
+      <li class="nav-item"><a  class="nav-link px-2 text-muted" title="Invia email su gmail" href="mailto:mauro.bogliaccino@gmail.com"><img src='img/gmail.png' alt='gmail'></a></li>
+      <li class="nav-item"><a  class="nav-link px-2 text-muted" title="Pagina twitter" href="https://twitter.com/maboglia"><img src='img/twitter.png' alt='twitter'></a></li>
+      <li class="nav-item"><a  class="nav-link px-2 text-muted" title="Pagina facebook" href="https://www.facebook.com/mauro.bogliaccino"><img src='img/facebook.png' alt='facebook'></a></li>
+
+
+    </ul>
+    <p class="text-center text-muted"><img src='img/creative_commons.png' alt=''> 2022 boglia</p>
+  </footer>
+
+
+
+
+
+
+</body>
+</html>
